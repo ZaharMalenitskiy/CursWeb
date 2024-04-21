@@ -3,14 +3,14 @@
 
 <head>
     <title>MusicForYou</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/loginpage.css">
 </head>
 
 <body>
     <form action="/login" method="post" class="mainform" id="mainform">
         <div id="login-form" class="form">
             <h2 id="In1">Вход в<br>MusicForYou</h2>
-            <input type="text" id="login" name="login" placeholder="Введите логин...">
+            <input type="text" id="login" name="login" placeholder="Введите логин..." required>
             <input class="loginbtn" type="button" value="Далее" onclick="showPasswordForm()">
             <a class="forgotpassword" href="/forgot-password">Забыл пароль</a><br>
         </div>
@@ -21,7 +21,7 @@
             <div class="avatarcase">
                 <img src="assets/loginpage/avatar.jpg" id="avatar" alt="Аватар">
             </div>
-            <input type="password" id="password" name="password" placeholder="Введите пароль...">
+            <input type="password" id="password" name="password" placeholder="Введите пароль..." required>
             <input class="submitbtn" type="submit" value="Войти">
             <a class="forgotpassword" href="/forgot-password">Забыл пароль</a><br>
         </div>

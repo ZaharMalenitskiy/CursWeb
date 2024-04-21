@@ -1,7 +1,4 @@
 function showPasswordForm() {
-  var loginForm = document.getElementById("login-form");
-  var passwordForm = document.getElementById("password-form");
-
   removeMainForm();
   setTimeout(function () {
     document.getElementById("login-form").style.display = "none";
@@ -12,9 +9,6 @@ function showPasswordForm() {
 }
 
 function showLoginForm() {
-  var loginForm = document.getElementById("login-form");
-  var passwordForm = document.getElementById("password-form");
-
   removeMainForm();
   setTimeout(function () {
     document.getElementById("password-form").style.display = "none";
