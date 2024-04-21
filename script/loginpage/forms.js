@@ -1,3 +1,17 @@
+function checkLogin() {
+  document.getElementById("loginbtn").addEventListener("click", function () {
+    var inputField = document.getElementById("login");
+    var inputValue = inputField.value.trim();
+
+    if (inputValue === "") { 
+      inputField.placeholder = "Пожалуйста, заполните поле ввода!";   
+    } 
+    else {
+      showPasswordForm()
+    }
+  });
+}
+
 function showPasswordForm() {
   removeMainForm();
   setTimeout(function () {
