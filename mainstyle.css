@@ -6,6 +6,9 @@ body {
     padding-left: 10%; /* отступы вокруг всей страницы */
     padding-right: 10%; /* отступы вокруг всей страницы */
 }
+.container-with-margin {
+  margin-top: 180px;
+}
 
 
 
