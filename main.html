@@ -46,6 +46,15 @@
       </div>
     </nav>
     
+   
+    <div class="container">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    
     
     <section class="mt-4 pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">		
 			<!--song card start-->
@@ -229,5 +238,33 @@
     
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+    
+     <script>
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const bars = document.querySelectorAll('.bar');
+
+        let isPlaying = false;
+        let animationInterval;
+
+        playPauseBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                clearInterval(animationInterval);
+            } else {
+                animationInterval = setInterval(() => {
+                    bars.forEach((bar, i) => {
+                        setTimeout(() => {
+                            const randomHeight = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
+                            bar.style.height = `${randomHeight}px`;
+                        }, i * 250);
+                    });
+                }, 1250);
+            }
+
+            isPlaying = !isPlaying;
+        });
+    </script>
+  
+    
 </body>
+    
 </html>
