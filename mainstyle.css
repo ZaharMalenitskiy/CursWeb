@@ -2,9 +2,9 @@ html{
     font-size: 25px;
 }
 body {
-    background-color: #BDB76B; /* серый цвет фона */
-    margin-left: 10%; /* отступы вокруг всей страницы */
-    margin-right: 10%; /* отступы вокруг всей страницы */
+    background-color: #FFE4B5; /*  цвет фона */
+    margin-left: 1%; /* отступы вокруг всей страницы */
+    margin-right: 1%; /* отступы вокруг всей страницы */
 }
 /*страница настройки*/
 .container-with-margin {
@@ -42,22 +42,22 @@ body {
 	height: 200px;
 	object-fit: cover;
 }
-
-
-
-
-
-
+/*эквалайзер*/
 .container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            height: 200px;
-        }
-        .bar {
-            width: 20px;
-            height: 50px;
-            background-color: #3498db;
-            margin: 0 5px;
-            transition: height 0.5s;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+}
+.bar {
+    width: 20px;
+    height: 50px;
+    background-color: #3498db;
+    margin: 0 5px;
+    transition: height 0.5s;
+
+}
+
+
+
+
