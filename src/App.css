@@ -102,6 +102,10 @@ input[type="password"] {
   position: relative;
 }
 
+.date-group {
+  display: flex;
+}
+
 .submitbtn,
 .loginbtn,
 .regbtn,
@@ -208,10 +212,28 @@ input[type="gender"] {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
   margin-right: .5rem;
   height: 1.75rem;
-  width: 31.25%;
+  flex-grow: 1;
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   font-family: "Cascadia Light";
+}
+
+.date1::-webkit-scrollbar-track,
+.date2::-webkit-scrollbar-track,
+.date3::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет фона трека */
+}
+
+select option:checked {
+  background-color: #331420;
+}
+
+select {
+  appearance: none;
+}
+
+option:hover { /*Не работает*/
+  box-shadow: 10px 10px 10px 100px orange inset;
 }
 
 input[type="date3"] {

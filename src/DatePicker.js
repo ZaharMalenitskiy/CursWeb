@@ -31,10 +31,11 @@ function DatePicker() {
     const daysArray = updateDays(month, year);
 
     return (
+        
         <div className="input-container">
             <div>Дата рождения</div>
             <div className="date-group">
-                <select className="date1" value={day} onChange={handleDayChange}>
+                <select className="date1" value={day} onChange={handleDayChange}> 
                     {daysArray.map((day) => (
                         <option key={day} value={day}>
                             {day}
