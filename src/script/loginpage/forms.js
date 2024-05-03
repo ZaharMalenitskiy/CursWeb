@@ -1,19 +1,27 @@
-function checkLogin() {
-  document.getElementById("loginbtn").addEventListener("click", function () {
-    var inputField = document.getElementById("login");
-    var inputValue = inputField.value.trim();
+document.getElementById("loginbtn").addEventListener("click", function () {
+  var inputField = document.getElementById("login");
+  var inputValue = inputField.value;
 
-    if (inputValue === "") { 
-      inputField.placeholder = "Пожалуйста, заполните поле ввода!";   
-    } 
-    else {
-      showPasswordForm()
-    }
-  });
-}
+  if (inputValue === "") { 
+    inputField.placeholder = "Пожалуйста, заполните поле ввода!";   
+  } 
+  else {
+    showPasswordForm()
+  }
+});
+
+document.getElementById("login").addEventListener('keydown', function(event) {
+  var keyCode = event.keyCode || event.which;
+
+  if (keyCode === 32) {
+      event.preventDefault();
+  }
+});
 
 function showPasswordForm() {
   removeMainForm();
+  login = document.getElementById("login");
+  document.getElementById("login-regform").textContent = login.value;
   setTimeout(function () {
     document.getElementById("login-form").style.display = "none";
     document.getElementById("password-form").style.display = "block";
@@ -24,6 +32,8 @@ function showPasswordForm() {
 
 function showLoginForm() {
   removeMainForm();
+  login = document.getElementById("login");
+  login.placeholder = "Введите логин..."; 
   setTimeout(function () {
     document.getElementById("password-form").style.display = "none";
     document.getElementById("login-form").style.display = "block";

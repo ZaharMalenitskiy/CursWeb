@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Barlow"; /* Название вашего шрифта */
+  src: url("/src/assets/fonts/Barlow-ExtraBold.ttf"); /* Путь к вашему файлу шрифта */
+}
+@font-face {
+  font-family: "Cascadia"; /* Название вашего шрифта */
+  src: url("/src/assets/fonts/CascadiaMono-Bold.otf"); /* Путь к вашему файлу шрифта */
+}
+
+@font-face {
+  font-family: "Cascadia Light"; /* Название вашего шрифта */
+  src: url("/src/assets/fonts/CascadiaMono-ExtraLight.otf"); /* Путь к вашему файлу шрифта */
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/src/assets/global/frame.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  font-family: Cascadia Light;
+  -webkit-text-fill-color: white;
+}
+
+.avatar {
+  width: 20vh;
+  height: 20vh;
+  background-size: cover;
+  background-image: url(/src/assets/loginpage/avatar2.jpg);
+  background-position: center;
+  border-radius: 10rem;
+  box-shadow: 2px 2px 15px #FFB8B8;
+}
+
+#username {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
+.blur-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(250px); /* Применяем размытие */
+  z-index: -1; /* Устанавливаем z-index, чтобы этот элемент был под формами */
+}
+
+.titlelogin1,
+.titlepass1 {
+  position: relative;
+  text-align: center;
+  top: -2.5rem;
+  z-index: 0;
+  width: auto;
+  height: fit-content;
+  -webkit-text-fill-color: #FFB8B8;
+  border-radius: 10px 10px 0 0;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: Cascadia;
+  text-shadow: 0px 3px #842730;
+}
+
+.titlelogin2,
+.titlepass2 {
+  position: relative;
+  text-align: center;
+  top: -2.5rem;
+  z-index: 0;
+  width: auto;
+  height: fit-content;
+  -webkit-text-fill-color: #FFB8B8;
+  border-radius: 10px 10px 0 0;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: Barlow;
+  text-shadow: 0px 3px #842730;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30vw;
+  padding: 2vw 1vw;
+  background-color: rgb(250, 194, 194);
+  border-radius: 0 0 10px 10px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    height: 4rem;
+    padding-left: 1.5rem;
+    font-size: medium;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Размеры элемента будут включать в себя паддинги и рамку */
+    font-family: Cascadia Light;
+}
+
+input[type="text"] {
+  margin-top: 14.85rem;
+}
+
+.input-container {
+  width: 40%;
+  position: relative;
+}
+
+.submitbtn,
+.loginbtn,
+.regbtn {
+    width: 40%;
+    height: 4rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 2rem;
+    font-size: medium;
+    background-color: #3F1928;
+    border: 1px solid #F45F66;
+    -webkit-text-fill-color: white;
+    transition: 0.2s ease;
+    font-family: Cascadia Light;
+}
+
+.regbtn {
+  margin-top: 2.5rem;
+}
+
+.loginbtn:hover,
+.submitbtn:hover,
+#backbutton:hover,
+.regbtn:hover {
+    background-color: #481D2E;
+}
+
+.loginbtn:active,
+.submitbtn:active,
+#backbutton:active,
+.regbtn:active {
+    background-color: #331420;
+}
+
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.registration-form {
+  position: relative;
+  top: 15%;
+  width: 50%;
+  height: 80%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: absolute;
+}
+
+#backbutton {
+  margin-top: 2.5rem;
+  cursor: pointer;
+  width: 40%;
+  height: 4rem;
+  text-align: center;
+  background-color: #3F1928;
+  border: 1px solid #F45F66;
+  -webkit-text-fill-color: white;
+  border-radius: 2rem;
+  line-height: 2.5rem;
+  transition: 0.2s ease;
+  z-index: 1;
+  font-size: medium;
+  font-family: Cascadia Light;
+}
+
+#forgot-pass {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  width: fit-content;
+  cursor: pointer;
+  color: white;
+}
+
+#login-input,
+#register-input {
+  background-color: #B93037;
+  border: 1px solid #F45F66;
+  border-radius: 2rem;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
