@@ -1,0 +1,24 @@
+html{
+    font-size: 25px;
+}
+body {
+    background-color: #FFE4B5; /*  цвет фона */
+    margin-left: 10%; /* отступы вокруг всей страницы */
+    margin-right: 10%; /* отступы вокруг всей страницы */
+}
+/*страница настройки*/
+.container-with-margin {
+  margin-top: 100px;
+}
+/*верхняя и нижняя панели*/
+.bg-custom {
+    background-color: #FFD700; 
+}
+.navbar {
+  height: 50px; 
+}
+
+
+
+
+
