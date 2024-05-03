@@ -35,3 +35,24 @@ function showMainForm() {
   mainForm.classList.remove("hide")
   mainForm.classList.add("show")
 }
+
+
+// ... (существующий код) ...
+
+function showRestoreForm() {
+  document.getElementById("password-form").style.display = "none";
+  document.getElementById("restore-form").style.display = "block";
+}
+
+function showLoginForm() {
+  document.getElementById("restore-form").style.display = "none";
+  document.getElementById("login-form").style.display = "block";
+}
+
+// ... (существующий код) ...
+
+// Измените обработчик клика по ссылке "Забыл пароль"
+document.querySelector('.forgotpassword').addEventListener('click', function(event) {
+  event.preventDefault(); // Отменяем переход по ссылке
+  showRestoreForm();
+});

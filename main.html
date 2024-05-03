@@ -57,10 +57,10 @@
         <div class="bar"></div>
     </div>
     
-    
+            
     <section class="mt-4 pt-2 p-4 mx-5 d-flex justify-content-center" style="flex-wrap: wrap;">		
 			<!--song card start-->
-			<div class="m-4" style="width: 200px;">
+			<div class="m-4" id="album1" style="width: 200px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingAlbum1" aria-controls="offcanvasScrollingAlbum1">
 				<div style="position: relative;">
 					<img src="assets/mainpage/04.jpg" class="big-song-img rounded img-fluid" >
 					<a href="#">
@@ -74,10 +74,18 @@
 					<small class="text-muted">Song description</small>
 				</div>
 			</div>
-			<!--song card end-->
-
+        	<!--song card end-->
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingAlbum1" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas с прокруткой тела</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Альбом 1</p>
+          </div>
+        </div>
 			<!--song card start-->
-			<div class="m-4" style="width: 200px;">
+			<div class="m-4" style="width: 200px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollingAlbum2" aria-controls="offcanvasScrollingAlbum2">
 				<div style="position: relative;">
 					<img src="assets/mainpage/05.jpg" class="big-song-img rounded img-fluid" >
 					<a href="#">
@@ -92,7 +100,15 @@
 				</div>
 			</div>
 			<!--song card end-->
-
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrollingAlbum2" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas с прокруткой тела</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+          </div>
+          <div class="offcanvas-body">
+            <p>Попробуйте прокрутить оставшуюся часть страницы, чтобы увидеть эту опцию в действии.</p>
+          </div>
+        </div>
 			<!--song card start-->
 			<div class="m-4" style="width: 200px;">
 				<div style="position: relative;">
@@ -213,9 +229,7 @@
 			<!--song card end-->
 		</section>    
         </div>
-        <div class="col-4">
-               
-        </div>   
+            
     </div>
     
     

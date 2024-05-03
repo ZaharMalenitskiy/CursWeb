@@ -12,7 +12,7 @@
             <h2 id="In1">Вход в<br>MusicForYou</h2>
             <input type="text" id="login" name="login" placeholder="Введите логин...">
             <input class="loginbtn" type="button" value="Далее" onclick="showPasswordForm()">
-            <a class="forgotpassword" href="/forgot-password">Забыл пароль</a><br>
+            
         </div>
 
         <div id="password-form" class="form" style="display: none;">
@@ -26,6 +26,14 @@
             <a class="forgotpassword" href="/forgot-password">Забыл пароль</a><br>
         </div>
         
+        <div id="restore-form" class="form" style="display: none;">
+          <div class="back-btn" onclick="showLoginForm()"></div>
+          <h2 id="In3" style="font-size: 1.5rem;">Восстановление пароля</h2>
+          <p>На вашу почту отправлен код подтверждения.</p>
+          <input type="text" id="restoreCode" name="restoreCode" placeholder="Введите код...">
+          <input class="submitbtn" type="submit" value="Подтвердить">
+        </div>
+
     </form>
 </body>
 

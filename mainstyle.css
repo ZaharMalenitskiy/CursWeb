@@ -57,7 +57,49 @@ body {
     transition: height 0.5s;
 
 }
-
-
-
-
+/*правая часть*/
+#offcanvasScrollingAlbum1 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum2 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum3 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum4 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum5 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum6 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum7 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum8 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
+#offcanvasScrollingAlbum9 {
+  top: 10%; /* Отступ сверху */
+  bottom: 10%; /* Отступ снизу */
+  right: 10%; /* Отступ справа */
+}
