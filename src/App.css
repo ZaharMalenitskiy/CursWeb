@@ -1,281 +1,86 @@
-@font-face {
-  font-family: "Barlow";
-  src: url("/src/assets/fonts/Barlow-ExtraBold.ttf");
-}
-
-@font-face {
-  font-family: "Cascadia";
-  src: url("/src/assets/fonts/CascadiaMono-Bold.otf");
-}
-
-@font-face {
-  font-family: "Cascadia Light";
-  src: url("/src/assets/fonts/CascadiaMono-ExtraLight.otf");
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/src/assets/global/frame.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
-  font-family: "Cascadia Light";
-  -webkit-text-fill-color: white;
-}
-
-.avatar {
-  width: 20vh;
-  height: 20vh;
-  background-size: cover;
-  background-image: url(/src/assets/loginpage/avatar2.jpg);
-  background-position: center;
-  border-radius: 10rem;
-  box-shadow: 2px 2px 15px #FFB8B8;
-}
-
-#username {
-  margin-top: .5rem;
-  margin-bottom: 1rem;
-}
-
-.blur-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(250px);
-  z-index: -1;
-}
-
-.titlelogin1,
-.titlepass1,
-.titlelogin2,
-.titlepass2 {
-  position: relative;
-  text-align: center;
-  top: -2.5rem;
-  z-index: 0;
-  width: auto;
-  height: fit-content;
-  -webkit-text-fill-color: #FFB8B8;
-  border-radius: 10px 10px 0 0;
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 0px 3px #842730;
-  font-family: "Cascadia";
-}
-
-.titlelogin2,
-.titlepass2 {
-  font-family: "Barlow";
-}
-
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  width: 30vw;
-  padding: 2vw 1vw;
-  background-color: rgb(250, 194, 194);
-  border-radius: 0 0 10px 10px;
-}
-
-input[type="text"], 
-input[type="password"] {
-  width: 100%;
-  height: 4rem;
-  padding-left: 1.5rem;
-  font-size: medium;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  font-family: "Cascadia Light";
-  box-shadow: 0 0 10px 5px rgba(255, 184, 184, 0.15);
-}
-
-.input-container {
-  width: 40%;
-  position: relative;
-}
-
-.date-group {
-  display: flex;
-}
-
-.submitbtn,
-.loginbtn,
-.regbtn,
-#backbutton {
-  width: 40%;
-  height: 4rem;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  border-radius: 2rem;
-  font-size: medium;
-  background-color: #3F1928;
-  border: 1px solid #F45F66;
-  -webkit-text-fill-color: white;
-  transition: 0.2s ease;
-  font-family: "Cascadia Light";
-  box-shadow: 0 0 10px 5px rgba(255, 184, 184, 0.15);
-}
-
-.regbtn {
-  margin-top: 2.5rem;
-}
-
-.loginbtn:hover,
-.submitbtn:hover,
-#backbutton:hover,
-.regbtn:hover {
-  background-color: #481D2E;
-}
-
-.loginbtn:active,
-.submitbtn:active,
-#backbutton:active,
-.regbtn:active {
-  background-color: #331420;
-}
-
-.registration-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
-}
-
-.registration-form {
-  position: relative;
-  top: 15%;
-  width: 50%;
-  height: 80%;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  position: absolute;
-}
-
-#backbutton {
-  margin-top: 2.5rem;
-  cursor: pointer;
-  line-height: 2.5rem;
-  transition: 0.2s ease;
-  z-index: 1;
-}
-
-#forgot-pass {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  width: fit-content;
-  cursor: pointer;
-  color: white;
-}
-
-input {
-  background-color: #B93037;
-  border: 1px solid #F45F66;
-  border-radius: 2rem;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
-  font-family: "Cascadia Light";
-}
-
-input[type="login"],
-input[type="pass"],
-input[type="email"],
-input[type="gender"] {
-  width: 98%;
-  height: 1.75rem;
-  margin-bottom: 0.7rem;
-  border-radius: 0.5rem;
-}
-
-.error-message {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.date1,
-.date2,
-.date3 {
-  background-color: #B93037;
-  color: rgba(255, 255, 255, 0.6); 
-  border: 1px solid #F45F66;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
-  margin-right: .5rem;
-  height: 1.75rem;
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
-  font-family: "Cascadia Light";
-}
-
-.date1::-webkit-scrollbar-track,
-.date2::-webkit-scrollbar-track,
-.date3::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Цвет фона трека */
-}
-
-select option:checked {
-  background-color: #331420;
-}
-
-select {
-  appearance: none;
-}
-
-option:hover { /*Не работает*/
-  box-shadow: 10px 10px 10px 100px orange inset;
-}
-
-input[type="date3"] {
-  margin-right: 0;
-}
-
-.fade-in {
-  opacity: 1;
-  visibility: visible;
-  animation: fadeIn 1s ease forwards;
-}
-
-.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  animation: fadeOut 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+.dropdown-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
   }
-
-  50% {
-    opacity: 0;
+  
+  .menu-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease;
+    height: 60px; /* Высота скрытого меню */
+    overflow: hidden;
   }
-
-  100% {
-    opacity: 1;
+  
+  .menu-content.open {
+    height: 200px; /* Высота раскрытого меню */
   }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
+  
+  .menu-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
   }
-
-  50% {
-    opacity: 0;
+  
+  .menu-toggle .avatar {
+    font-size: 24px;
+    margin-right: 10px;
   }
-
-  100% {
-    opacity: 0;
+  
+  .menu-toggle.open {
+    display: none;
   }
-}
+  
+  .settings-icon {
+    margin-left: auto;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .username {
+    margin-left: 10px;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+  }
+  
+  .links {
+    margin-bottom: 10px;
+  }
+  
+  .links a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .links a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .settings {
+    display: flex;
+    align-items: center;
+  }
+  

@@ -1,0 +1,43 @@
+/* Sidebar.css */
+.sidebar {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  width: 400px;
+}
+
+.menu-toggle {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: left;
+  transition: width 0.3s ease; /* Добавлено: анимация изменения ширины */
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li:hover {
+  background-color: #444;
+}
